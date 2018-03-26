@@ -1,15 +1,14 @@
 var Main = {
 
-	initReviews: function () {
-		var owl = $('.reviews_block_container-wrapper .owl-carousel');
-		owl.on('changed.owl.carousel', function(e) {
-			Main.setOwlPagination(e);
-		}).on('initialized.owl.carousel',function(e){
-			Main.InitOwlPagination(e);
-		});
+
+	init: function(){
+		this.initProductsList();
+	},
+	initProductsList: function(){
+		var owl = $('#product_banner');
 		owl.owlCarousel({
 			margin: 0,
-			nav: false,
+			nav: true,
 			dots:false,
 			loop: true,
 			responsive: {
@@ -17,19 +16,22 @@ var Main = {
 					items: 1
 				},
 				600: {
-					items: 1
+					items: 2
 				},
 				1000: {
-					items: 1
+					items: 4
 				}
 			}
 		});
-	},
 
-	init: function(){
-
-	},
-
+		$('#product_banner .raty').raty({
+			starType: 'i',
+			readOnly: true,
+			score: 3.5,/*function() {
+			 return $(this).attr('data-score');
+			 }*/
+		});
+	}
 
 
 };
