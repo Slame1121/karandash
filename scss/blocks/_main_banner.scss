@@ -1,0 +1,31 @@
+.main_banner{
+  &_container{
+    &-list{
+      &__item{
+        position: relative;
+        &-container{
+          left:0;
+          top:100px;
+          position: absolute;
+          padding:0 150px;
+          &__text{
+            width: 40%;
+            h3{
+              white-space: nowrap;
+              font-weight: bold;
+              font-size: 48px;
+              margin-bottom:45px;
+            }
+            p{
+              font-size: 24px;
+              margin-bottom:45px;
+            }
+            a{
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
