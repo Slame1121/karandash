@@ -20,8 +20,22 @@
               font-family: $font-montserrat;
               position: relative;
               display: block;
+
+              span:nth-child(2){
+                font-weight: bold;
+                opacity: 0;
+              }
+              span:first-child{
+                position: absolute;
+              }
               &:hover{
-                font-weight: 700;
+
+                span:first-child{
+                  opacity: 0;
+                }
+                span:nth-child(2){
+                  opacity: 1;
+                }
                 &:after{
                   width: (100%);
                   height: 3px;
