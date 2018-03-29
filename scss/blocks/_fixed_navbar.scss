@@ -4,11 +4,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     &-item{
       display: flex;
       justify-content: space-between;
       &__account{
-
         a{
           span{
             font-size: 12px;
@@ -92,8 +92,84 @@
         }
       }
       &__catalog{
+        &:hover{
+          .fixed_navbar_container-item__catalog-dropdown{
+            max-width: 100%;
+          }
+        }
+        &-dropdown{
+          transition: all .4s;
+          position: absolute;
+          top:0;
+          padding-top: 75px;
+          background: #fff;
+          max-width: 0;
+          z-index: 25;
+          width: 100%;
+          overflow: hidden;
+          left:0;
+          &__catalog{
+            display: flex;
+            &-content{
+              .categories_block_container-item{
+                max-width: 33.333333333%;
+                &:last-child{
+                  max-width: 33.333333334%;
+                }
+              }
+            }
+            &-navbar{
+              width: 30%;
+              min-width: 30%;
+              ul{
+                &:hover{
+                  li{
+                    &.active{
+                      a{
+                        font-weight: normal;
+                      }
+                    }
+
+                    a{
+                      &:hover{
+                        font-weight: bold;
+                      }
+                    }
+                  }
+                }
+                li{
+                  &.active{
+                    position: relative;
+                    a{
+                      font-weight: bold;
+                      font-size: 16px;
+                    }
+
+                    &:before{
+                      content: "";
+                      position: absolute;
+                      left:-10px;
+                      top:50%;
+                      transform: translateY(-50%);
+                      width: 30px;
+                      height: 1px;
+                      background: #000;
+                    }
+                  }
+                  a{
+                    display: inline-block;
+                    font-size: 14px;
+                    padding:15px 0 15px 25px;
+                  }
+                }
+              }
+            }
+          }
+        }
         &-button{
           cursor: pointer;
+          position: relative;
+          z-index:26;
           display: flex;
           justify-content: space-between;
           align-items: center;

@@ -2878,7 +2878,8 @@ a {
   .fixed_navbar_container {
     display: flex;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    position: relative; }
     .fixed_navbar_container-item {
       display: flex;
       justify-content: space-between; }
@@ -2933,8 +2934,54 @@ a {
           padding: 12px 15px 12px 40px;
           border: 0 none;
           border-bottom: 1px solid black; }
+      .fixed_navbar_container-item__catalog:hover .fixed_navbar_container-item__catalog-dropdown {
+        max-width: 100%; }
+      .fixed_navbar_container-item__catalog-dropdown {
+        transition: all .4s;
+        position: absolute;
+        top: 0;
+        padding-top: 75px;
+        background: #fff;
+        max-width: 0;
+        z-index: 25;
+        width: 100%;
+        overflow: hidden;
+        left: 0; }
+        .fixed_navbar_container-item__catalog-dropdown__catalog {
+          display: flex; }
+          .fixed_navbar_container-item__catalog-dropdown__catalog-content .categories_block_container-item {
+            max-width: 33.333333333%; }
+            .fixed_navbar_container-item__catalog-dropdown__catalog-content .categories_block_container-item:last-child {
+              max-width: 33.333333334%; }
+          .fixed_navbar_container-item__catalog-dropdown__catalog-navbar {
+            width: 30%;
+            min-width: 30%; }
+            .fixed_navbar_container-item__catalog-dropdown__catalog-navbar ul:hover li.active a {
+              font-weight: normal; }
+            .fixed_navbar_container-item__catalog-dropdown__catalog-navbar ul:hover li a:hover {
+              font-weight: bold; }
+            .fixed_navbar_container-item__catalog-dropdown__catalog-navbar ul li.active {
+              position: relative; }
+              .fixed_navbar_container-item__catalog-dropdown__catalog-navbar ul li.active a {
+                font-weight: bold;
+                font-size: 16px; }
+              .fixed_navbar_container-item__catalog-dropdown__catalog-navbar ul li.active:before {
+                content: "";
+                position: absolute;
+                left: -10px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 30px;
+                height: 1px;
+                background: #000; }
+            .fixed_navbar_container-item__catalog-dropdown__catalog-navbar ul li a {
+              display: inline-block;
+              font-size: 14px;
+              padding: 15px 0 15px 25px; }
       .fixed_navbar_container-item__catalog-button {
         cursor: pointer;
+        position: relative;
+        z-index: 26;
         display: flex;
         justify-content: space-between;
         align-items: center; }
@@ -3101,6 +3148,43 @@ a {
             background: #ffd925; }
       .product_list_container-header__item:last-child {
         margin-right: 0; }
+
+.categories_block_container {
+  padding: 15px 0; }
+  .categories_block_container-item {
+    float: left;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.6s; }
+    .categories_block_container-item.active {
+      opacity: 1; }
+    .categories_block_container-item:hover .categories_block_container-item__header {
+      background: #ffd925; }
+    .categories_block_container-item__content {
+      padding: 25px; }
+      .categories_block_container-item__content ul {
+        list-style-type: none; }
+        .categories_block_container-item__content ul li:hover:before {
+          content: url(../images/icon-point-active.jpg); }
+        .categories_block_container-item__content ul li:before {
+          content: url(../images/icon-point.jpg);
+          margin-top: 3px;
+          display: block;
+          float: left;
+          margin-right: 4px; }
+        .categories_block_container-item__content ul li a {
+          font-size: 16px;
+          padding: 5px 5px;
+          display: inline-block; }
+    .categories_block_container-item__header {
+      border-bottom: 1px solid #000;
+      text-align: center;
+      height: 200px; }
+      .categories_block_container-item__header a {
+        padding: 15px 15px;
+        display: block;
+        margin-bottom: 20px; }
 
 @media (max-width: 1200px) {
   .container {

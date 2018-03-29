@@ -1,0 +1,57 @@
+.categories_block_container{
+  padding:15px 0;
+  &-item{
+    float:left;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.6s;
+
+    &.active{
+      opacity: 1;
+    }
+    &:hover{
+      .categories_block_container-item__header{
+        background: #ffd925;
+      }
+    }
+    &__content{
+      padding: 25px;
+      ul{
+        list-style-type: none;
+        li{
+          &:hover{
+            &:before{
+              content:url(../images/icon-point-active.jpg);
+            }
+            a{
+            }
+          }
+          &:before{
+            content:url(../images/icon-point.jpg);
+            margin-top: 3px;
+            display: block;
+            float: left;
+            margin-right: 4px;
+          }
+          a{
+            font-size: 16px;
+            padding:5px 5px;
+            display: inline-block;
+          }
+        }
+      }
+    }
+    &__header{
+      border-bottom: 1px solid #000;
+      text-align: center;
+      height: 200px;
+
+      a{
+        padding: 15px 15px;
+        display: block;
+        margin-bottom:20px;
+      }
+    }
+  }
+}
