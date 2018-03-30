@@ -23,6 +23,17 @@ var Main = {
 			fixed_navbar.find('.categories_block_container-item[data-subcategory='+category_id+']').show().addClass('active');
 
 		});
+
+		$('.categories_block_container-item__content-seemore').on('click', function(){
+
+			$(this).closest('.categories_block_container-item').before($(this).closest('.categories_block_container-item').clone().addClass('clone'))
+			$(this).closest('.categories_block_container-item').addClass('opened');
+		})
+
+		$('.categories_block_container').on('mouseleave', '.categories_block_container-item.opened', function(e){
+			$('.categories_block_container').find('.clone').remove();
+			$('.categories_block_container').find('.opened').removeClass('opened');
+		})
 	},
 	init: function(){
 		this.initProductsList();

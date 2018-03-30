@@ -95,6 +95,7 @@
         &:hover{
           .fixed_navbar_container-item__catalog-dropdown{
             max-width: 100%;
+            overflow: visible;
           }
         }
         &-dropdown{
@@ -122,6 +123,8 @@
               width: 30%;
               min-width: 30%;
               ul{
+                list-style-type: none;
+
                 &:hover{
                   li{
                     &.active{

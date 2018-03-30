@@ -2935,7 +2935,8 @@ a {
           border: 0 none;
           border-bottom: 1px solid black; }
       .fixed_navbar_container-item__catalog:hover .fixed_navbar_container-item__catalog-dropdown {
-        max-width: 100%; }
+        max-width: 100%;
+        overflow: visible; }
       .fixed_navbar_container-item__catalog-dropdown {
         transition: all .4s;
         position: absolute;
@@ -2956,28 +2957,30 @@ a {
           .fixed_navbar_container-item__catalog-dropdown__catalog-navbar {
             width: 30%;
             min-width: 30%; }
-            .fixed_navbar_container-item__catalog-dropdown__catalog-navbar ul:hover li.active a {
-              font-weight: normal; }
-            .fixed_navbar_container-item__catalog-dropdown__catalog-navbar ul:hover li a:hover {
-              font-weight: bold; }
-            .fixed_navbar_container-item__catalog-dropdown__catalog-navbar ul li.active {
-              position: relative; }
-              .fixed_navbar_container-item__catalog-dropdown__catalog-navbar ul li.active a {
-                font-weight: bold;
-                font-size: 16px; }
-              .fixed_navbar_container-item__catalog-dropdown__catalog-navbar ul li.active:before {
-                content: "";
-                position: absolute;
-                left: -10px;
-                top: 50%;
-                transform: translateY(-50%);
-                width: 30px;
-                height: 1px;
-                background: #000; }
-            .fixed_navbar_container-item__catalog-dropdown__catalog-navbar ul li a {
-              display: inline-block;
-              font-size: 14px;
-              padding: 15px 0 15px 25px; }
+            .fixed_navbar_container-item__catalog-dropdown__catalog-navbar ul {
+              list-style-type: none; }
+              .fixed_navbar_container-item__catalog-dropdown__catalog-navbar ul:hover li.active a {
+                font-weight: normal; }
+              .fixed_navbar_container-item__catalog-dropdown__catalog-navbar ul:hover li a:hover {
+                font-weight: bold; }
+              .fixed_navbar_container-item__catalog-dropdown__catalog-navbar ul li.active {
+                position: relative; }
+                .fixed_navbar_container-item__catalog-dropdown__catalog-navbar ul li.active a {
+                  font-weight: bold;
+                  font-size: 16px; }
+                .fixed_navbar_container-item__catalog-dropdown__catalog-navbar ul li.active:before {
+                  content: "";
+                  position: absolute;
+                  left: -10px;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  width: 30px;
+                  height: 1px;
+                  background: #000; }
+              .fixed_navbar_container-item__catalog-dropdown__catalog-navbar ul li a {
+                display: inline-block;
+                font-size: 14px;
+                padding: 15px 0 15px 25px; }
       .fixed_navbar_container-item__catalog-button {
         cursor: pointer;
         position: relative;
@@ -3150,21 +3153,41 @@ a {
         margin-right: 0; }
 
 .categories_block_container {
-  padding: 15px 0; }
+  padding: 15px 0;
+  display: flex;
+  flex-flow: wrap; }
   .categories_block_container-item {
     float: left;
+    margin-bottom: 5px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
     opacity: 0;
-    overflow: hidden;
     transition: all 0.6s; }
+    .categories_block_container-item.opened {
+      position: absolute; }
+      .categories_block_container-item.opened li.hidden {
+        display: block; }
     .categories_block_container-item.active {
       opacity: 1; }
     .categories_block_container-item:hover .categories_block_container-item__header {
       background: #ffd925; }
     .categories_block_container-item__content {
-      padding: 25px; }
+      padding: 25px;
+      background: #fff; }
+      .categories_block_container-item__content-seemore {
+        margin-top: 10px; }
+        .categories_block_container-item__content-seemore p {
+          cursor: pointer;
+          position: relative; }
+          .categories_block_container-item__content-seemore p:after {
+            position: absolute;
+            right: 45px;
+            top: 50%;
+            transform: translateY(-50%);
+            content: url(../images/icon-arrow-right.png); }
       .categories_block_container-item__content ul {
         list-style-type: none; }
+        .categories_block_container-item__content ul li.hidden {
+          display: none; }
         .categories_block_container-item__content ul li:hover:before {
           content: url(../images/icon-point-active.jpg); }
         .categories_block_container-item__content ul li:before {
