@@ -104,18 +104,21 @@
           top:0;
           padding-top: 75px;
           background: #fff;
-         /* max-width: 0;*/
+          max-width: 0;
           z-index: 25;
           width: 100%;
           overflow: hidden;
           left:0;
           &__catalog{
             display: flex;
+
             &-content{
+              width: 70%;
               .categories_block_container-item{
-                max-width: 33.333333333%;
+                max-width: 33.3333333333%;
+                width: 33.3333333333%;
                 &:last-child{
-                  max-width: 33.333333334%;
+                  max-width: 33.3333333334%;
                 }
               }
             }
