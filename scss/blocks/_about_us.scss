@@ -1,0 +1,27 @@
+.about_us{
+  background: #f8f9fa;
+  &_container{
+    padding:80px 0;
+    &-content{
+      display: flex;
+      margin-top: 20px;
+      justify-content: space-between;
+      &__logo{
+        margin-right:60px;
+      }
+      &__text{
+        p{
+          &.title{
+            font-size: 20px;
+            text-transform: uppercase;
+            margin-bottom:20px;
+          }
+        }
+      }
+    }
+    &-header{
+      text-align: center;
+      padding-bottom: 40px;
+    }
+  }
+}

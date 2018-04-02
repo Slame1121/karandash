@@ -39,10 +39,67 @@ var Main = {
 			//
 		})
 	},
+	initReviews: function () {
+		var swiper = new Swiper('.swiper-container', {
+			spaceBetween: 120,
+			slidesPerView: 2,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			pagination: {
+				el: '.swiper-pagination',
+			},
+			history: {
+				key: 'slide',
+			},
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				draggable: true,
+			},
+		});
+	},
+	initBlog: function () {
+		var sliders_sizes = {
+			maxWidth: 665,
+			maxHeight: 460
+		},distance = 100;
+
+		if($(window).width() <= 768){
+			sliders_sizes = {
+				maxWidth: 300,
+				maxHeight: 270
+			};
+			distance = 5;
+		}else{
+			if($(window).width() <= 998){
+				sliders_sizes = {
+					maxWidth: 480,
+					maxHeight: 410
+				};
+				distance = 15;
+			}
+		}
+
+		$('#blog_slider').carousel({
+			num: 3,
+			maxWidth: sliders_sizes['maxWidth'],
+			maxHeight: sliders_sizes['maxHeight'],
+			distance: distance,
+			scale: 0.6,
+			autoPlay: true,
+			animationTime: 500,
+			showTime: 4000
+		});
+	},
 	init: function(){
 		this.initProductsList();
 
 		this.initCatalogDropDown();
+
+		this.initReviews();
+
+		this.initBlog();
 	},
 	initProductsList: function(){
 		var owl = $('#product_banner');

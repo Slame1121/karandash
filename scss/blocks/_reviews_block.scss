@@ -1,0 +1,85 @@
+.reviews_block{
+  &_container{
+    padding: 80px 0;
+    &-button{
+      text-align: center;
+      margin-top:30px;
+    }
+    &-content{
+      padding: 20px 10%;
+
+      .swiper-container{
+        padding-bottom:30px;
+        &-horizontal>.swiper-scrollbar{
+          width: 94%;
+          left:3%;
+          right: 3%;
+          height: 1px;
+        }
+        .swiper-scrollbar-drag{
+          height:5px;
+          top:-5px;
+        }
+        .swiper-button-next, .swiper-button-prev{
+          bottom:0;
+          top:auto;
+          background-size: auto;
+          width: 12px;
+          height: 9px;
+        }
+        .swiper-button-prev{
+          background-image: url('../images/review-right.png');
+          transform: rotate(180deg);
+          left:0;
+        }
+        .swiper-button-next{
+          background-image: url('../images/review-right.png');
+          right: 0;
+        }
+      }
+
+      &__item{
+        &-content{
+          margin:10px 0 20px;
+          p{
+            font-size: 16px;
+          }
+        }
+        &-user{
+          p{
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            font-weight: 600;
+            &:before{
+              margin-right:15px;
+              content:url(../images/icon-user.png);
+
+            }
+          }
+        }
+      }
+    }
+    &-header{
+      text-align: center;
+      padding-bottom:40px;
+      span{
+        font-size: 24px;
+        font-weight: bold;
+        text-transform: uppercase;
+        position: relative;
+        &:before{
+          content:"";
+          transition: all 1s;
+          width: 60%;
+          height: 3px;
+          bottom: -20px;
+          left:20%;
+          display: block;
+          background: #ffd925;
+          position: absolute;
+        }
+      }
+    }
+  }
+}
