@@ -60,36 +60,50 @@ var Main = {
 		});
 	},
 	initBlog: function () {
-		var sliders_sizes = {
-			maxWidth: 665,
-			maxHeight: 460
-		},distance = 100;
+		var carousel;
+		carousel = $('#blog_slider');
 
-		if($(window).width() <= 768){
-			sliders_sizes = {
-				maxWidth: 300,
-				maxHeight: 270
-			};
-			distance = 5;
-		}else{
-			if($(window).width() <= 998){
-				sliders_sizes = {
-					maxWidth: 480,
-					maxHeight: 410
-				};
-				distance = 15;
+		carousel.owlCarousel({
+			margin: 0,
+			nav: true,
+			dots:false,
+			loop: true,
+			navText: ["<img src='images/icon-slider-left.png' />", "<img src='images/icon-slider-right.png' />"],
+			center: true,
+			responsive: {
+				0: {
+					items: 1
+				},
+				600: {
+					items: 1
+				},
+				1000: {
+					items: 3
+				}
 			}
-		}
+		});
 
-		$('#blog_slider').carousel({
-			num: 3,
-			maxWidth: sliders_sizes['maxWidth'],
-			maxHeight: sliders_sizes['maxHeight'],
-			distance: distance,
-			scale: 0.6,
-			autoPlay: true,
-			animationTime: 500,
-			showTime: 4000
+	},
+	initPartners: function () {
+		var owl = $('#partners_slider');
+		owl.owlCarousel({
+			margin: 10,
+			nav: true,
+			loop: true,
+			dots:false,
+			items:3,
+			navText: ["<img src='images/icon-slider-left.png' />", "<img src='images/icon-slider-right.png' />"],
+			responsive: {
+				0: {
+					items: 1
+				},
+				600: {
+					items: 2
+				},
+				1000: {
+					items: 3
+				}
+			}
 		});
 	},
 	init: function(){
@@ -100,6 +114,8 @@ var Main = {
 		this.initReviews();
 
 		this.initBlog();
+
+		this.initPartners();
 	},
 	initProductsList: function(){
 		var owl = $('#product_banner');
