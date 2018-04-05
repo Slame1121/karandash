@@ -1,6 +1,7 @@
 .contacts{
+
   &_container{
-    margin-top:100px;
+    padding:80px 0;
     &-header{
       text-align: center;
       margin-bottom:50px;
@@ -15,12 +16,15 @@
 
       &_left{
         width: 60%;
-        
-        input.form-input-custom{
+        textarea{
+          min-height: 100px;
+        }
+        .form-input-custom{
           display: block;
           border: none;
-          border-bottom: 3px solid rgba(204, 204, 204, 0.5);
+          border-bottom: 1px solid rgb(204, 204, 204);
           width: 80%;
+          padding:5px 15px;
           margin-bottom: 20px;
           height: 30px;
 
@@ -48,26 +52,44 @@
       &_right{
         width: 30%;
 
-        .address-wrapper{
-          display: flex;
-          justify-content: space-around;
-          align-items: center;
+        p{
+          font-weight: 600;
+          position: relative;
+          margin-bottom: 10px;
+          &.email,&.telephone{
+            padding:10px 0;
+            font-weight: normal;
 
-          &_address{
-            max-width:70%;
           }
-          p{
-            font-size: 15px;
+          &.email{
+            &:before{
+              content:url(../images/icon-email.png);
+              margin-right:10px;
+            }
+            &:after{
+              content: "";
+              position: absolute;
+              background: #ccc;
+              width:100%;
+              height: 1px;
+              left:0;
+              bottom: 0;
+            }
           }
-        }
-        .phones-wrapper{
-          display: flex;
-          justify-content: space-around;
-          align-items: center;
+          &.telephone{
 
-          &_phones{
-            p{
-              font-size: 24px;
+            &:before{
+              content:url(../images/icon-telephone.png);
+              margin-right:10px;
+            }
+            &:after{
+              content: "";
+              position: absolute;
+              background: #ccc;
+              width:100%;
+              height: 1px;
+              left:0;
+              bottom: 0;
             }
           }
         }

@@ -1,0 +1,46 @@
+.footer_container{
+  background: #ffd925;
+  position: relative;
+
+  &-wrapper{
+    width: calc(50% + 600px - 390px);
+    z-index:0;
+    right: 0;
+    background: #000;
+    position: absolute;
+    height: 100%;
+  }
+  &-columns{
+    padding:60px 0;
+    display: flex;
+    justify-content: space-between;
+    &__left{
+      width: 390px;
+      min-width: 390px;
+    }
+    &__right{
+      position: relative;
+      a{
+        color: #fff;
+      }
+
+      &-categories{
+        position: relative;
+        z-index: 1;
+        li{
+          display: inline-block;
+          width: 33%;
+          float:left;
+        }
+      }
+      &-navbar{
+        position: relative;
+        z-index: 1;
+        li{
+          display: inline-block;
+
+        }
+      }
+    }
+  }
+}
