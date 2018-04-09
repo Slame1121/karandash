@@ -106,6 +106,12 @@ var Main = {
 			}
 		});
 	},
+	initBackgrounds: function () {
+		setTimeout(function(){
+			$('.backbrounds-divider').css('height',$('body').height());
+		}, 300)
+
+	},
 	init: function(){
 		this.initProductsList();
 
@@ -116,6 +122,8 @@ var Main = {
 		this.initBlog();
 
 		this.initPartners();
+
+		this.initBackgrounds();
 	},
 	initProductsList: function(){
 		var owl = $('#product_banner');

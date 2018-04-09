@@ -1,5 +1,12 @@
 .contacts{
-
+  &_backgrounds{
+    position: relative;
+    &-note{
+      right: 150px;
+      top: 100px;
+      position: absolute;
+    }
+  }
   &_container{
     padding:80px 0;
     &-header{

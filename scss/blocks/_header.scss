@@ -1,5 +1,7 @@
 .header{
   background: #ffd925;
+  position: relative;
+  z-index: 11;
   &_container{
     display: flex;
     justify-content: space-between;

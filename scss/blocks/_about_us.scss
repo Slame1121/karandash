@@ -1,5 +1,13 @@
 .about_us{
   background: #f8f9fa;
+  &-backgrounds{
+    position: relative;
+    &-1{
+      position: absolute;
+      right:150px;
+      top:-125px;
+    }
+  }
   &_container{
     padding:80px 0;
     &-content{
