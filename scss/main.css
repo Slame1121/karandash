@@ -3595,28 +3595,121 @@ span.block_title {
     position: absolute;
     height: 100%; }
   .footer_container-columns {
-    padding: 60px 0;
+    padding: 30px 0;
     display: flex;
     justify-content: space-between; }
     .footer_container-columns__left {
-      width: 390px;
-      min-width: 390px; }
+      width: 340px;
+      min-width: 340px;
+      padding-right: 50px; }
+      .footer_container-columns__left-description {
+        margin: 20px 0; }
+        .footer_container-columns__left-description p.title {
+          font-weight: 600;
+          text-transform: uppercase; }
+      .footer_container-columns__left-social {
+        display: flex;
+        flex: auto; }
+        .footer_container-columns__left-social > a {
+          margin-left: 5px; }
+        .footer_container-columns__left-social i:after {
+          margin-right: 10px;
+          width: 90px;
+          content: "";
+          background: #000;
+          height: 1px;
+          float: left;
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%); }
+      .footer_container-columns__left-form {
+        margin-bottom: 15px;
+        background: #fff;
+        border-radius: 20px;
+        width: 100%;
+        padding: 12px 0;
+        align-items: center;
+        justify-content: space-around;
+        display: flex; }
+        .footer_container-columns__left-form input {
+          font-size: 12px;
+          border: 0 none;
+          min-width: 190px; }
+        .footer_container-columns__left-form__submit {
+          background: transparent;
+          font-weight: 800;
+          font-size: 16px;
+          border: 0;
+          cursor: pointer; }
     .footer_container-columns__right {
-      position: relative; }
+      position: relative;
+      padding-left: 75px; }
       .footer_container-columns__right a {
         color: #fff; }
+      .footer_container-columns__right-copyrights {
+        color: #fff;
+        font-size: 12px;
+        display: inline-block;
+        margin-top: 15px;
+        width: 100%; }
       .footer_container-columns__right-categories {
         position: relative;
-        z-index: 1; }
+        z-index: 1;
+        margin-top: 20px; }
         .footer_container-columns__right-categories li {
           display: inline-block;
           width: 33%;
-          float: left; }
+          float: left;
+          margin: 5px 0; }
+          .footer_container-columns__right-categories li a {
+            font-size: 12px;
+            position: relative; }
+            .footer_container-columns__right-categories li a:after {
+              width: 0;
+              left: 0;
+              bottom: -5px;
+              z-index: 2;
+              content: "";
+              position: absolute;
+              transition: all .4s;
+              background: #ffd925;
+              height: 1px; }
+            .footer_container-columns__right-categories li a:hover {
+              color: #ffd925; }
+              .footer_container-columns__right-categories li a:hover:after {
+                width: 20%; }
       .footer_container-columns__right-navbar {
         position: relative;
-        z-index: 1; }
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 15px; }
+        .footer_container-columns__right-navbar:after {
+          bottom: 0;
+          left: 0;
+          background: #565656;
+          height: 1px;
+          width: 100%;
+          content: "";
+          position: absolute; }
         .footer_container-columns__right-navbar li {
           display: inline-block; }
+          .footer_container-columns__right-navbar li a {
+            position: relative; }
+            .footer_container-columns__right-navbar li a:after {
+              width: 0;
+              left: 0;
+              bottom: -15px;
+              z-index: 2;
+              content: "";
+              position: absolute;
+              transition: all .4s;
+              background: #ffd925;
+              height: 2px; }
+            .footer_container-columns__right-navbar li a:hover {
+              color: #ffd925; }
+              .footer_container-columns__right-navbar li a:hover:after {
+                width: 100%; }
 
 @media (max-width: 1200px) {
   .container {
