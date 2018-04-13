@@ -14,4 +14,156 @@
   .container {
     width: 100%;
   }
+
+  .backbrounds{
+    display: none;
+  }
+  .footer_container{
+    &-wrapper{
+      display: none;
+    }
+    &-columns{
+
+      flex-direction: column;
+      &__right{
+        background: #000;
+      }
+      &__left{
+          padding-right: 15px;
+          padding-left: 15px;
+        text-align: center;
+        min-width: 100%;
+        width: auto;
+      }
+    }
+  }
+  .owl-additional-pagination{
+    left:20px;
+    p{
+      font-size: 14px;
+
+      &:after{
+        height: 30px;
+      }
+
+      &.active{
+        font-size: 16px;
+      }
+    }
+  }
+  .product_list{
+    background: none;
+    &_container-header{
+      flex-direction: column;
+      &__item{
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        &:after{
+          display: none;
+        }
+      }
+
+    }
+  }
+  .main_banner_container-list__item-container{
+    top:0;
+    padding-left: 50px;
+    padding-right: 0;
+    &__text{
+      width: 80%;
+      a{
+        font-size: 14px;
+        padding: 5px 20px;
+      }
+      h3{
+        font-size: 20px;
+        white-space: normal;
+      }
+      p{
+        display: none;
+      }
+    }
+  }
+
+  .fixed_navbar{
+    padding: 10px 0;
+    &_container{
+      flex-direction: column;
+      &:after{
+        content: "";
+        display: table;
+        clear: both;
+      }
+      &-item{
+        width: 100%;
+        display: block;
+        &:last-child{
+          margin:10px 0;
+          >div{
+            float:left;
+
+            &:last-child{
+              float:right;
+              margin-right: 15px;
+            }
+          }
+        }
+
+        &__catalog{
+          width: 100%;
+          padding: 0 15px;
+          display: flex;
+          justify-content: space-between;
+          flex-flow: row-reverse;
+          &-responsive_search{
+            display: block;
+          }
+          &-button__item{
+            img{
+              margin-right: 10px;
+            }
+            p{
+              display: none;
+            }
+          }
+        }
+        &__search{
+          display: none;
+        }
+      }
+    }
+
+
+  }
+
+  .header{
+    &_container{
+      flex-direction: column;
+      &-item{
+
+        &-mobile-nav__container{
+          display: none;
+        }
+        &-mobile-nav{
+          display: block;
+        }
+        &__contacts{
+          text-align: center;
+        }
+        &__menu{
+          display: none;
+        }
+        &:first-child{
+          width: 100%;
+          justify-content: space-between;
+          display: flex;
+          align-items: center;
+          >div{
+            padding:15px;
+          }
+        }
+      }
+    }
+  }
 }

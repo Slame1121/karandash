@@ -5,11 +5,7 @@ var Home = {
 
 	initMainBanner: function () {
 		var owl = $('.main_banner_container-list');
-		owl.on('changed.owl.carousel', function(e) {
-			//Main.setOwlPagination(e);
-		}).on('initialized.owl.carousel',function(e){
-			//Main.InitOwlPagination(e);
-		});
+
 		owl.owlCarousel({
 			margin: 0,
 			nav: false,

@@ -47,3 +47,40 @@ span.block_title{
   margin:0 auto;
 }
 
+
+/**
+Carousel pagination
+**/
+
+.owl-additional-pagination{
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left:40px;
+  transform: translateY(-50%);
+
+  p{
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    &.active{
+      font-size: 22px;
+      font-weight: bold;
+    }
+    &:last-child{
+      &:after{
+        display: none;
+      }
+    }
+    &:after{
+      margin: 0 auto;
+      content:"";
+      height:60px;
+      width: 1px;
+      background: #000;
+      display: block;
+
+    }
+  }
+}
+
