@@ -57,6 +57,13 @@ var Main = {
 				el: '.swiper-scrollbar',
 				draggable: true,
 			},
+			breakpoints: {
+				// when window width is <= 320px
+				786: {
+					slidesPerView: 1,
+					spaceBetween: 0
+				},
+			}
 		});
 	},
 	initBlog: function () {

@@ -28,31 +28,30 @@
           bottom:0;
           width: 100%;
         }
+        &:hover{
+
+
+          .categories_block_container-item{
+            &__wrapper{
+              box-shadow:0 0 15px rgba(0, 0, 0, 0.25);
+              max-height:6000px;
+              &-header{
+                border-color:#000;
+                background: #ffd925;
+                a{
+                  display: inline-block;
+                }
+              }
+            }
+          }
+        }
         &__wrapper{
           max-height: 221px;
           box-shadow:0 0 0;
           background: transparent;
           overflow: hidden;
           position: absolute;
-          &:hover{
 
-            box-shadow:0 0 15px rgba(0, 0, 0, 0.25);
-            max-height:6000px;
-            .categories_block_container-item{
-              &__wrapper{
-                &-header{
-                  border-color:#000;
-                  a{
-                    display: inline-block;
-                  }
-                }
-              }
-            }
-          }
-          &:hover{
-
-
-          }
           &-header{
             border-color:#ccc;
 

@@ -78,7 +78,9 @@
       a{
         color: #fff;
       }
-
+      &-adaptive-slogan{
+        display: none;
+      }
       &-copyrights{
         color:#fff;
         font-size: 12px;
@@ -91,6 +93,12 @@
         position: relative;
         z-index: 1;
         margin-top:20px;
+
+        &:after{
+          display: table;
+          content:"";
+          clear: both;
+        }
         li{
           display: inline-block;
           width: 33%;
